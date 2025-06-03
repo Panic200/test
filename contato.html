@@ -1,0 +1,42 @@
+<!-- contato.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">💖 Amor Eterno</div>
+      <div class="menu-toggle" id="mobile-menu">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+        <li><a href="poemas.html">Poemas</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-page">
+    <h2>Entre em Contato</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+      <div id="form-response"></div>
+    </form>
+    <div id="map"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

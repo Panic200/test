@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #fdeff9, #fff0f5);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #ff6f91;
+  padding: 1em 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-family: 'Great Vibes', cursive;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #d60052;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px auto;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 4em 2em;
+  background: linear-gradient(to bottom, #ffe1e9, #fff0f5);
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #d60052;
+  font-family: 'Great Vibes', cursive;
+}
+
+.hero button {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #d60052;
+}
+#love-message {
+  font-size: 1.5em;
+  color: #d60052;
+  margin-top: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #d60052;
+  width: 0;
+  animation: typing 8s steps(45, end) forwards, blink 0.75s step-end infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-family: 'Georgia', cursive;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 240, 245, 0.8);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* FEATURES */
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.feature {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1em;
+}
+
+/* SOBRE */
+.event {
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.event:hover {
+  background-color: #ffe4ed;
+}
+
+.event-details {
+  display: none;
+  margin-top: 0.5em;
+  color: #555;
+  font-style: italic;
+  animation: fadeIn 0.3s ease;
+}
+
+.event.active .event-details {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* PÁGINAS COMUNS */
+
+.about-page,
+.gallery-page,
+.contact-page,
+.playlist-page,
+.poems-page {
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline .event {
+  background: #fff;
+  margin: 1em 0;
+  padding: 1em;
+  border-left: 4px solid #ff6f91;
+  border-radius: 8px;
+}
+
+/* GALERIA */
+
+.gallery-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 2em auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* FORMULÁRIOS */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input,
+textarea {
+  padding: 0.8em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background: #ff6f91;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #d60052;
+}
+
+#form-response {
+  margin-top: 1em;
+  color: green;
+  font-weight: bold;
+}
+
+/* PLAYLIST */
+
+.playlist-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.playlist-page h2 {
+  font-size: 3rem;
+  color: #ec38bc;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 20px;
+}
+
+.playlist-page p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.spotify a {
+  display: inline-block;
+  background-color: #1DB954;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.spotify a:hover {
+  background-color: #17a74a;
+  transform: scale(1.05);
+}
+
+.music-icon {
+  font-size: 40px;
+  color: #ec38bc;
+  margin-bottom: 10px;
+}
+.featured-songs {
+  margin: 30px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.featured-songs h3 {
+  color: #d60052;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.featured-songs ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.featured-songs li {
+  padding: 8px 0;
+  font-size: 1.1rem;
+  border-bottom: 1px dashed #ffb6c1;
+}
+
+.playlist-image {
+  margin-top: 40px;
+}
+
+.playlist-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.romantic-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #d60052;
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
